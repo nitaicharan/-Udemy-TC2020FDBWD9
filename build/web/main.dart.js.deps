@@ -1,7 +1,10 @@
 file:///home/acdan/Git/Udemy-TC2020FDBWD9/.dart_tool/flutter_build/c60501128bb0a1f1eb3f9a42f488b299/main.dart
 file:///home/acdan/Git/Udemy-TC2020FDBWD9/.packages
-file:///home/acdan/Git/Udemy-TC2020FDBWD9/lib/imput_page.dart
+file:///home/acdan/Git/Udemy-TC2020FDBWD9/lib/content.dart
+file:///home/acdan/Git/Udemy-TC2020FDBWD9/lib/icon_content.dart
+file:///home/acdan/Git/Udemy-TC2020FDBWD9/lib/input_page.dart
 file:///home/acdan/Git/Udemy-TC2020FDBWD9/lib/main.dart
+file:///home/acdan/Git/Udemy-TC2020FDBWD9/lib/reusable_card.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/collection.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/src/algorithms.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/src/canonicalized_map.dart
@@ -22,6 +25,8 @@ file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/sr
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/src/unmodifiable_wrappers.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/src/utils.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/src/wrappers.dart
+file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.5.0/lib/font_awesome_flutter.dart
+file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.5.0/lib/icon_data.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8/lib/meta.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib/typed_buffers.dart
 file:///opt/Flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib/hash.dart
