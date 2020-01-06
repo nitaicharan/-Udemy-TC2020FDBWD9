@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'icon_content.dart';
+import 'reusable_card.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -20,18 +23,28 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     colour: Color(0xFF1D1E33),
+                    child: IconContent(
+                      icon: FontAwesomeIcons.mars,
+                      text: 'MALE',
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     colour: Color(0xFF1D1E33),
+                    child: IconContent(
+                      icon: FontAwesomeIcons.venus,
+                      text: 'FEMALE',
+                    ),
                   ),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: ReusableCard(colour: Color(0xFF1D1E33)),
+            child: ReusableCard(
+              colour: Color(0xFF1D1E33),
+            ),
           ),
           Expanded(
             child: Row(
@@ -49,23 +62,14 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
+          Container(
+            color: Color(0xFFEB1555),
+            margin: EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: 80.0,
+          ),
         ],
       ),
-    );
-  }
-}
-
-class ReusableCard extends StatelessWidget {
-  ReusableCard({@required this.colour});
-
-  final Color colour;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-          color: colour, borderRadius: BorderRadius.circular(10.0)),
     );
   }
 }
