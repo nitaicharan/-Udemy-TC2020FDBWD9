@@ -6,6 +6,11 @@ import 'reusable_card.dart';
 const Color inactiveColour = Color(0xFF111328);
 const Color activeColour = Color(0xFF1D1E33);
 
+enum Gender {
+  male,
+  female,
+}
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
@@ -15,15 +20,15 @@ class _InputPageState extends State<InputPage> {
   Color maleColour = inactiveColour;
   Color femaleColour = inactiveColour;
 
-  void updateColour(int gender) {
-    if (gender == 1) {
+  void updateColour(Gender selected) {
+    if (selected == Gender.male) {
       if (maleColour == inactiveColour) {
         maleColour = activeColour;
         femaleColour = inactiveColour;
       } else {
         maleColour = inactiveColour;
       }
-    } else {
+    } if (selected == Gender.female) {
       if (femaleColour == inactiveColour) {
         femaleColour = activeColour;
         maleColour = inactiveColour;
@@ -47,7 +52,7 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () => setState(
-                      () => updateColour(1),
+                      () => updateColour(Gender.male),
                     ),
                     child: ReusableCard(
                       colour: maleColour,
@@ -61,7 +66,7 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () => setState(
-                      () => updateColour(2),
+                      () => updateColour(Gender.female),
                     ),
                     child: ReusableCard(
                       colour: femaleColour,
