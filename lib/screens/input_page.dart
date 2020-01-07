@@ -1,9 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:bmi_calculator/components/bottom_button.dart';
+import 'package:bmi_calculator/components/icon_content.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
+import 'package:bmi_calculator/components/round_icon_button.dart';
+import 'package:bmi_calculator/content.dart';
+import 'package:bmi_calculator/screens/results_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'icon_content.dart';
-import 'reusable_card.dart';
-import 'content.dart';
-import 'results_page.dart';
+import 'package:flutter/material.dart';
 
 enum Gender {
   male,
@@ -131,7 +133,7 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.minus,
                               onPressed: () => setState(
                                 () => this.weight--,
@@ -140,7 +142,7 @@ class _InputPageState extends State<InputPage> {
                             SizedBox(
                               width: 10.0,
                             ),
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () => setState(
                                 () => this.weight++,
@@ -169,7 +171,7 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.minus,
                               onPressed: () => setState(
                                 () => age--,
@@ -178,7 +180,7 @@ class _InputPageState extends State<InputPage> {
                             SizedBox(
                               width: 10.0,
                             ),
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () => setState(
                                 () => age++,
@@ -193,43 +195,15 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () => setState(() => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ResultsPage(),
-                ))),
-            child: Container(
-              color: kBottomColor,
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: kBottomHeight,
-              child: Text('CALCULATE'),
-            ),
-          ),
+          BottomButton(
+            onPress: () => setState(() => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ResultsPage()),
+                )),
+            text: 'CALCULATOR',
+          )
         ],
       ),
-    );
-  }
-}
-
-class IconButton extends StatelessWidget {
-  IconButton({@required this.icon, @required this.onPressed});
-  final IconData icon;
-  final Function onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      elevation: 0.0,
-      child: Icon(this.icon),
-      onPressed: this.onPressed,
-      constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
-      ),
-      shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
     );
   }
 }
