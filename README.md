@@ -7,7 +7,7 @@
 
 Project available to access at: https://nitaicharan.github.io/Udemy-TC2020FDBWD9/
 
-<!--[![](Udemy-TC2020FDBWD9.png)](https://nitaicharan.github.io/Udemy-TC2020FDBWD9/)-->
+[![](Udemy-TC2020FDBWD9.gif)](https://nitaicharan.github.io/Udemy-TC2020FDBWD9/)
 
 ## About course
 This project was part of the Udemy course "The Complete 2020 Flutter Development Bootcamp with Dart" by Angela Yu.
